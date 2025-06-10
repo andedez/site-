@@ -1,0 +1,162 @@
+@{
+    ViewData["Title"] = "Exemplos Práticos";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Exemplos Práticos em C#</h1>
+    <p class="lead">Aprenda com exemplos reais e práticos de código</p>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h2 class="card-title">Calculadora Simples</h2>
+                <p class="card-text">
+                    Um exemplo de calculadora básica em C#:
+                </p>
+                <pre><code>public class Calculadora
+{
+    public double Somar(double a, double b)
+    {
+        return a + b;
+    }
+
+    public double Subtrair(double a, double b)
+    {
+        return a - b;
+    }
+
+    public double Multiplicar(double a, double b)
+    {
+        return a * b;
+    }
+
+    public double Dividir(double a, double b)
+    {
+        if (b == 0)
+            throw new DivideByZeroException();
+        return a / b;
+    }
+}</code></pre>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h2 class="card-title">Lista de Tarefas</h2>
+                <p class="card-text">
+                    Um exemplo de gerenciamento de tarefas:
+                </p>
+                <pre><code>public class Tarefa
+{
+    public string Titulo { get; set; }
+    public bool Concluida { get; set; }
+}
+
+public class GerenciadorTarefas
+{
+    private List<Tarefa> tarefas = new List<Tarefa>();
+
+    public void AdicionarTarefa(string titulo)
+    {
+        tarefas.Add(new Tarefa { Titulo = titulo });
+    }
+
+    public void ConcluirTarefa(int indice)
+    {
+        if (indice >= 0 && indice < tarefas.Count)
+            tarefas[indice].Concluida = true;
+    }
+}</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h2 class="card-title">Jogo de Adivinhação</h2>
+                <p class="card-text">
+                    Um jogo simples de adivinhar números:
+                </p>
+                <pre><code>public class JogoAdivinhacao
+{
+    private Random random = new Random();
+    private int numeroSecreto;
+    private int tentativas;
+
+    public void IniciarJogo()
+    {
+        numeroSecreto = random.Next(1, 101);
+        tentativas = 0;
+    }
+
+    public string TentarAdivinhar(int palpite)
+    {
+        tentativas++;
+        
+        if (palpite < numeroSecreto)
+            return "Tente um número maior!";
+        else if (palpite > numeroSecreto)
+            return "Tente um número menor!";
+        else
+            return $"Parabéns! Você acertou em {tentativas} tentativas!";
+    }
+}</code></pre>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h2 class="card-title">Gerenciador de Contatos</h2>
+                <p class="card-text">
+                    Um exemplo de gerenciamento de contatos:
+                </p>
+                <pre><code>public class Contato
+{
+    public string Nome { get; set; }
+    public string Email { get; set; }
+    public string Telefone { get; set; }
+}
+
+public class Agenda
+{
+    private List<Contato> contatos = new List<Contato>();
+
+    public void AdicionarContato(Contato contato)
+    {
+        contatos.Add(contato);
+    }
+
+    public Contato BuscarPorNome(string nome)
+    {
+        return contatos.FirstOrDefault(c => 
+            c.Nome.Equals(nome, StringComparison.OrdinalIgnoreCase));
+    }
+}</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Dicas para Praticar</h2>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Comece com programas simples e vá aumentando a complexidade</li>
+                    <li class="list-group-item">Tente modificar os exemplos e adicionar novas funcionalidades</li>
+                    <li class="list-group-item">Use o Visual Studio para testar os códigos</li>
+                    <li class="list-group-item">Comente seu código para entender cada parte</li>
+                    <li class="list-group-item">Não tenha medo de errar - é parte do aprendizado!</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div> 

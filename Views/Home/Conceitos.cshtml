@@ -1,0 +1,106 @@
+@{
+    ViewData["Title"] = "Conceitos Básicos";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Conceitos Básicos de Programação</h1>
+    <p class="lead">Entenda os fundamentos essenciais para começar a programar</p>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h2 class="card-title">Variáveis</h2>
+                <p class="card-text">
+                    Variáveis são como caixas onde guardamos informações. Em C#, por exemplo:
+                </p>
+                <pre><code>string nome = "Maria";
+int idade = 25;
+double altura = 1.75;
+bool estudante = true;</code></pre>
+                <p class="card-text mt-3">
+                    Cada variável tem um tipo específico que define que tipo de informação ela pode armazenar.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h2 class="card-title">Condicionais</h2>
+                <p class="card-text">
+                    Condicionais permitem que o programa tome decisões. Em C#:
+                </p>
+                <pre><code>if (idade >= 18)
+{
+    Console.WriteLine("Maior de idade");
+}
+else
+{
+    Console.WriteLine("Menor de idade");
+}</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h2 class="card-title">Loops</h2>
+                <p class="card-text">
+                    Loops permitem repetir ações. Em C#:
+                </p>
+                <pre><code>// For loop
+for (int i = 0; i < 5; i++)
+{
+    Console.WriteLine(i);
+}
+
+// While loop
+int contador = 0;
+while (contador < 5)
+{
+    Console.WriteLine(contador);
+    contador++;
+}</code></pre>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h2 class="card-title">Funções</h2>
+                <p class="card-text">
+                    Funções são blocos de código que realizam tarefas específicas. Em C#:
+                </p>
+                <pre><code>public int Somar(int a, int b)
+{
+    return a + b;
+}
+
+// Usando a função
+int resultado = Somar(5, 3); // resultado = 8</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Dicas Importantes</h2>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Sempre use nomes descritivos para suas variáveis e funções</li>
+                    <li class="list-group-item">Mantenha seu código organizado e bem indentado</li>
+                    <li class="list-group-item">Comente seu código para explicar partes complexas</li>
+                    <li class="list-group-item">Teste seu código frequentemente</li>
+                    <li class="list-group-item">Não tenha medo de errar - é parte do aprendizado!</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div> 
